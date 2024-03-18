@@ -5,7 +5,7 @@ import shoppingSundays from '@/sundaysList'
 
 <template>
   <div
-    class="flex flex-col justify-center items-center text-5xl text-center bg-blue-500 text-white [text-shadow:_0_5px_0_rgb(0_0_0_/_40%)]"
+    class="flex flex-col justify-center items-center text-xl sm:text-2xl md:text-3xl lg:text-4xl text-center bg-blue-500 text-white [text-shadow:_0_5px_0_rgb(0_0_0_/_40%)]"
   >
     <h1>Następne niedziele handlowe:</h1>
     <span

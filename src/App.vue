@@ -5,11 +5,13 @@ import { Heart } from 'lucide-vue-next'
 </script>
 
 <template>
-  <div class="*:h-dvh *:p-3">
+  <div class="*:min-h-dvh *:p-3">
     <TodayView />
     <NextSundays />
   </div>
-  <div class="bg-slate-800 text-slate-50 text-lg text-center p-2 flex justify-center items-center">
+  <div
+    class="bg-slate-800 text-slate-50 text-lg text-center p-2 flex flex-col justify-center items-center sm:flex-row"
+  >
     <span>
       Made by <a href="https://netman.ovh" class="underline text-blue-400">NetMan</a> with
     </span>
