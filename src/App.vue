@@ -1,23 +1,15 @@
 <script setup lang="ts">
 import TodayView from './views/TodayView.vue'
 import NextSundays from './views/NextSundays.vue'
-import { Heart } from 'lucide-vue-next'
+import FooterView from './views/FooterView.vue'
 </script>
 
 <template>
-  <div class="*:min-h-dvh *:p-3">
-    <TodayView />
-    <NextSundays />
-  </div>
   <div
-    class="bg-slate-800 text-slate-50 text-lg text-center p-2 flex flex-col justify-center items-center sm:flex-row"
+    class="*:p-3 *:[text-shadow:_0_3px_0_rgb(0_0_0_/_40%)] md:*:[text-shadow:_0_5px_0_rgb(0_0_0_/_40%)] *:flex *:flex-col *:justify-center *:items-center *:text-3xl *:md:text-4xl *:lg:text-5xl *:text-center *:text-white"
   >
-    <span>
-      Made by <a href="https://netman.ovh" class="underline text-blue-400">NetMan</a> with
-    </span>
-    <Heart class="fill-red-500 stroke-red-200 px-0.5 mx-1" />
-    <span> & <a href="https://vuejs.org" class="underline text-blue-400">Vue.js</a> </span>
+    <TodayView class="min-h-[98dvh]" />
+    <NextSundays class="min-h-[85dvh] px-4 py-6" />
   </div>
+  <FooterView />
 </template>
-
-<style scoped></style>

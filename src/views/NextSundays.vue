@@ -1,23 +1,13 @@
 <script setup lang="ts">
-import { format, isPast, isToday } from 'date-fns'
-import shoppingSundays from '@/sundaysList'
+import { useDates } from '@/composables'
 </script>
 
 <template>
-  <div
-    class="flex flex-col justify-center items-center text-xl sm:text-2xl md:text-3xl lg:text-4xl text-center bg-blue-500 text-white [text-shadow:_0_5px_0_rgb(0_0_0_/_40%)]"
-  >
-    <h1>Następne niedziele handlowe:</h1>
-    <span
-      v-for="(sunday, index) in shoppingSundays.some((d) => isToday(new Date(d)))
-        ? shoppingSundays.toSpliced(0, 2)
-        : shoppingSundays.toSpliced(0, 1)"
-      :key="sunday.toISOString()"
-    >
-      {{ !isPast(new Date(sunday)) && index <= 10 ? format(new Date(sunday), 'PPP') : '' }}
+  <div class="bg-blue-500">
+    <h1><strong>Następne niedziele handlowe:</strong></h1>
+    <span v-for="sunday in useDates('upcommingWorkingSundaysFormatted')" :key="sunday">
+      {{ sunday }}
     </span>
-    <span>(...)</span>
+    <span class="text-xl sm:text-2xl md:text-3xl lg:text-4xl">(...)</span>
   </div>
 </template>
-
-<style></style>
