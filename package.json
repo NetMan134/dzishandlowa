@@ -10,7 +10,8 @@
     "build-only": "vite build",
     "type-check": "vue-tsc --build --force",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
-    "format": "prettier --write src/"
+    "format": "prettier --write src/",
+    "prod": "node index.cjs"
   },
   "dependencies": {
     "autoprefixer": "^10.4.18",
@@ -18,7 +19,8 @@
     "lucide-vue-next": "^0.359.0",
     "postcss": "^8.4.36",
     "tailwindcss": "^3.4.1",
-    "vue": "^3.4.21"
+    "vue": "^3.4.21",
+    "express": "^5.2.1"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.7.2",

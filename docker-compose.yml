@@ -1,0 +1,7 @@
+services:
+  dzishandlowa:
+    restart: unless-stopped
+    container_name: dzishandlowa
+    build: .
+    ports:
+      - 9432:3000
